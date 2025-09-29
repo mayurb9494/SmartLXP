@@ -22,8 +22,8 @@ export default function LoginScreen() {
 
   const handleLogin = useCallback(async () => {
     if (!email.trim() || !password.trim() ) {
- //     Alert.alert('Error', 'Please fill in all fields');
-   //   return;
+     Alert.alert('Error', 'Please fill in all fields');
+      return;
     }
 
     setLoading(true);
@@ -33,7 +33,7 @@ export default function LoginScreen() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Simple validation for demo
-      if (email.includes('@') && password.length >= 2 || true) {
+      if (email.includes('@') && password.length >= 2) {
      router.replace('/(tabs)');
   // router.replace('/courses')
       } else {
